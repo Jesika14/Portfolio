@@ -1,0 +1,21 @@
+.project-main{
+    display: flex;
+    align-items: center;
+}
+.project-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-title{
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 7rem;
+    height: 100%;
+    text-align: center;
+    letter-spacing: 0.35em;
+    color: #FEDCAE;
+}

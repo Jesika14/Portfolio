@@ -1,0 +1,60 @@
+.project-card-main {
+  color: white;
+  padding: 0.5em;
+  margin: 1.2rem 0;
+  display: flex;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.13);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.project-card-main a,
+.project-card-main p {
+  margin: 0;
+}
+
+.project-card-left {
+  width: 50%;
+  padding: 1.5em;
+}
+
+.project-card-title {
+  font-size: 1.12rem;
+  text-decoration: none;
+  color: #fedcae;
+  cursor: pointer;
+}
+
+.project-card-subtitle {
+  color: #a8ffff;
+}
+
+.project-card-description {
+  text-align: justify;
+}
+
+.project-card-right {
+  width: 50%;
+  padding: 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card-image {
+  height: 100%;
+  max-height: 18rem;
+  width: 100%;
+}
+
+.project-card-gradient-outline {
+  border: 0.24em solid transparent;
+  border-image: linear-gradient(
+      90deg,
+      rgba(254, 223, 178, 1) 40%,
+      rgba(150, 255, 249, 1) 100%
+    )
+    1;
+}

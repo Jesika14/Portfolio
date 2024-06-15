@@ -1,0 +1,30 @@
+#navbar {
+  background-color: #60718b;
+  color: #c1ffff;
+}
+
+.nav-links-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /* Center vertically */
+  height: 100%;
+  margin: 0; /* Remove default margin */
+  border-bottom : 0.18em solid;
+  padding: 0.4em;
+  font-size: 1.2rem;
+  margin: 0 4vw;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #c1ffff; 
+  padding: 0 1em; 
+}
+
+.highlight {
+  font-weight: bold;
+  border-bottom: 2px solid ;
+}
