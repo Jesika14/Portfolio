@@ -13,6 +13,18 @@ const Navbar = () => {
   const [selected, setSelected] = useState("");
   const location = useLocation();
 
+  // Helper function for smooth scrolling with offset
+  const scrollWithOffset = (elementId) => {
+    const element = document.getElementById(elementId);
+    const navbarHeight = document.getElementById("navbar").offsetHeight;
+
+    if (element) {
+      const offset = 5; // Adjust as needed for spacing 
+      const yOffset = element.offsetTop - navbarHeight - offset;
+      window.scrollTo({ top: yOffset, behavior: "smooth" });
+    }
+  };
+
   useEffect(() => {
     const currentPath = location.hash;
     const matchingLink = navlinks.find((item) => item.path === currentPath);
@@ -22,7 +34,7 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <div id="navbar">
+    <nav id="navbar"> 
       <div className="nav-links-container">
         {navlinks.map((item, index) => (
           <Link
@@ -31,17 +43,14 @@ const Navbar = () => {
             className={`nav-links ${selected === item.name ? "highlight" : ""}`}
             onClick={() => {
               setSelected(item.name);
-              const element = document.getElementById(item.path.substring(1));
-              if (element) {
-                element.scrollIntoView({ behavior: "smooth" });
-              }
+              scrollWithOffset(item.path.substring(1)); 
             }}
           >
             {item.name}
           </Link>
         ))}
       </div>
-    </div>
+    </nav>
   );
 };
 

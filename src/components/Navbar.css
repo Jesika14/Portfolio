@@ -1,7 +1,11 @@
 #navbar {
   background-color: #60718b;
   color: #c1ffff;
-  
+  position: fixed; /* Keep navbar fixed to the viewport */
+  top: 0;          /* Position at the top */
+  left: 0;
+  width: 100%;     /* Full width */
+  z-index: 1000;
 }
 
 .nav-links-container {
