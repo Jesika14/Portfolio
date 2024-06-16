@@ -1,0 +1,46 @@
+.art-card-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  color: #fedcae;
+  padding: 2px;
+  background: rgb(168, 255, 255, 0.2);
+  background: linear-gradient(
+    180deg,
+    rgba(168, 255, 255, 1) 5%,
+    rgba(169, 231, 240, 1) 22%,
+    rgba(175, 143, 187, 1) 100%
+  );
+
+}
+
+.art-card-image {
+}
+
+.art-card-title h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.art-card-title {
+  margin: 1rem 0;
+  padding: 0 0.7rem;
+}
+
+.art-card-image img {
+  height: 100%;
+  width: 100%;
+  max-height: 18rem;
+}
+
+.art-card-gradient-outline {
+  border: 0.14em solid transparent;
+  border-image: linear-gradient(
+      90deg,
+      rgba(254, 223, 178, 1) 40%,
+      rgba(150, 255, 249, 1) 100%
+    )
+    1;
+}

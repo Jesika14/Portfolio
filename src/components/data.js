@@ -11,6 +11,37 @@ import {fab} from "../assets/image";
 import {landing_page} from "../assets/image";
 import {web_app} from "../assets/image";
 
+const artData = [
+  {
+    name: "Bridge", // Consider adding a name or title for each art piece
+    imgURL: bridge,
+  },
+  {
+    name: "Marlboro Box",
+    imgURL: marlboro_box,
+  },
+  {
+    name: "Night View",
+    imgURL: night_view,
+  },
+  {
+    name: "Road View",
+    imgURL: road_view,
+  },
+  {
+    name: "Shadow",
+    imgURL: shadow,
+  },
+  {
+    name: "Sipper",
+    imgURL: sipper,
+  },
+  {
+    name: "Village",
+    imgURL: village,
+  },
+];
+
 const projectData = [
   {
     title: "CineEase",
@@ -52,7 +83,6 @@ const projectData = [
       "Designed an intuitive and visually appealing sign-up page for a 3D mockup website, enhancing user experience and engagement.",
     imgURL: landing_page,
   },
-  // ... add more project objects as needed
 ];
 
-export default projectData;
+export { projectData, artData }; 
