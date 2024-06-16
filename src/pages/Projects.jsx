@@ -4,17 +4,14 @@ import projectData from "../components/data";
 import "./Projects.css";
 
 const Project = () => {
+  console.log(projectData)
   return (
     <div className="project-main">
-      
       <div className="project-list">
         {projectData.map((project, index) => (
           <ProjectCard
             key={index} // Add a unique key for each ProjectCard
-            title={project.title}
-            url={project.url}
-            subtitle={project.subtitle}
-            description={project.description}
+            {...project}
           />
         ))}
       </div>
