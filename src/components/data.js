@@ -10,6 +10,7 @@ import {design_documentation} from "../assets/image";
 import {fab} from "../assets/image";
 import {landing_page} from "../assets/image";
 import {web_app} from "../assets/image";
+import {case_study} from "../assets/image";
 
 const artData = [
   {
@@ -82,6 +83,14 @@ const projectData = [
     description:
       "Designed an intuitive and visually appealing sign-up page for a 3D mockup website, enhancing user experience and engagement.",
     imgURL: landing_page,
+  },
+  {
+    title: "Case Study",
+    url: "https://www.behance.net/gallery/206319435/Case-Study-of-enhancing-the-screening-process",
+    subtitle: "Tech Japan Screening Process",
+    description:
+      "Developed a recruitment screening process from scratch, focusing on UX/Ul design to enhance scheduling, communication, and overall user experience. Created wireframes, information architecture, and mockups.",
+    imgURL: case_study,
   },
 ];
 

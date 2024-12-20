@@ -10,6 +10,7 @@ import design_documentation from "./project/design-documentation.webp";
 import fab from "./project/fab.webp";
 import landing_page from "./project/landing-page.webp";
 import web_app from "./project/web-app.webp";
+import case_study from "./project/case_study.webp";
 
 export {
   bridge,
@@ -24,4 +25,5 @@ export {
   fab,
   landing_page,
   web_app,
+  case_study,
 };

@@ -4,7 +4,6 @@ import {projectData} from "../components/data";
 import "./Projects.css";
 
 const Project = () => {
-  console.log(projectData)
   return (
     <div className="project-main">
       <div className="project-list">
