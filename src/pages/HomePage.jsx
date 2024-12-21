@@ -24,6 +24,9 @@ const HomePage = () => {
       <div className="homepage-social" id="contact">
         <Social />
       </div>
+      {/* <div className="homepage-contact" id="contact">
+        <Contact />
+      </div> */}
     </div>
   );
 };

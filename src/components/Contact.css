@@ -1,0 +1,49 @@
+Users/jason_dan_iel/Developer/jesika-portfolio/src/pages/Contact.css */
+.contact-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: #fedcae;
+}
+
+.contact-main h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
+
+.contact-form label {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #60718b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #506080;
+}
