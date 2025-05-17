@@ -1,13 +1,13 @@
 import "./DigitalArtCard.css";
 
-const ArtCard = ({ ...props }) => {
+const ArtCard = ({ name, imgURL }) => {
   return (
     <div className="art-card-main art-card-gradient-outline">
       <div className="art-card-image">
-        <img src={props.imgURL} />
+        <img src={imgURL} alt={name} width="100%" height="auto" loading="lazy" />
       </div>
       <div className="art-card-title art-card-gradient-outline">
-        <h2>{props.name}</h2>
+        <h2>{name}</h2>
       </div>
     </div>
   );

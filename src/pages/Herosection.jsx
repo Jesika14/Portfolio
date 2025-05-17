@@ -4,9 +4,9 @@ import "./Herosection.css";
 const Herosection = () => {
   return (
     <div className="hero-section">
-      <div className="hero-section-model">
+      <div className="hero-section-model" aria-hidden="true">
         <iframe
-          title="Plum and Cream | Magic Recipes"
+          title="3D Portfolio Model"
           frameBorder="0"
           className="hero-iframe"
           allowFullScreen
@@ -28,12 +28,15 @@ const Herosection = () => {
           </p>
         </div>
         <div className="hero-section-download-cv">
-          <h1
+          <a
+            href="https://drive.google.com/file/d/1VeQ7ONnKUNHCqUuLoNP35AkRe0WFUBI0/view"
+            target="_blank"
+            rel="noopener noreferrer"
             className="about-left-title gradient-outline"
-            onClick={() => window.open("https://drive.google.com/file/d/1VeQ7ONnKUNHCqUuLoNP35AkRe0WFUBI0/view", "_blank")}
+            aria-label="Download CV"
           >
             Download CV
-          </h1>
+          </a>
         </div>
       </div>
     </div>

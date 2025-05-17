@@ -1,8 +1,27 @@
-.homepage-main{
-    background-color: #60718B;
-    padding: 0 4vw;
+.homepage-main {
+  background-color: #60718B;
+  padding: 0;
 }
 
-.homepage-herosection{
+.homepage-herosection {
+  padding-top: 50px; /* Space for fixed navbar */
+}
 
+.homepage-about,
+.homepage-project,
+.homepage-art,
+.homepage-social {
+  scroll-margin-top: 60px; /* For smooth scrolling with fixed navbar */
+}
+
+@media (min-width: 768px) {
+  .homepage-main {
+    padding: 0 2vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .homepage-main {
+    padding: 0 4vw;
+  }
 }

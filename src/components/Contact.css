@@ -1,16 +1,16 @@
-Users/jason_dan_iel/Developer/jesika-portfolio/src/pages/Contact.css */
+/* Users/jason_dan_iel/Developer/jesika-portfolio/src/pages/Contact.css */
 .contact-main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: var(--space-md) var(--space-sm);
   color: #fedcae;
 }
 
 .contact-main h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-md);
 }
 
 .contact-form {
@@ -21,22 +21,26 @@ Users/jason_dan_iel/Developer/jesika-portfolio/src/pages/Contact.css */
 }
 
 .contact-form label {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  margin-bottom: var(--space-xs);
+  font-size: var(--fs-sm);
 }
 
 .contact-form input,
 .contact-form textarea {
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  font-size: 1rem;
+  margin-bottom: var(--space-sm);
+  padding: var(--space-xs);
+  font-size: var(--fs-sm);
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
+.contact-form textarea {
+  min-height: 150px;
+}
+
 .contact-form button {
-  padding: 0.7rem;
-  font-size: 1.2rem;
+  padding: var(--space-sm);
+  font-size: var(--fs-md);
   color: #fff;
   background-color: #60718b;
   border: none;
@@ -46,4 +50,20 @@ Users/jason_dan_iel/Developer/jesika-portfolio/src/pages/Contact.css */
 
 .contact-form button:hover {
   background-color: #506080;
+}
+
+.error-message {
+  color: #ff6b6b;
+  margin-bottom: var(--space-sm);
+}
+
+.success-message {
+  color: #4ecdc4;
+  margin-bottom: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+  .contact-main {
+    padding: var(--space-lg) var(--space-md);
+  }
 }

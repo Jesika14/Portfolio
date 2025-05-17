@@ -1,31 +1,32 @@
-import React from "react";
+import React, { memo } from "react";
 import "./ProjectCard.css";
 
-function ProjectCard({ ...props }) {
+const ProjectCard = memo(({ title, url, subtitle, description, imgURL }) => {
   return (
     <div className="project-card-main project-card-gradient-outline">
       <div className="project-card-left">
         <a
-          href={props.url}
+          href={url}
           target="_blank"
           rel="noopener noreferrer"
           className="project-card-title"
         >
-          {props.title}
+          {title}
         </a>
-        <p className="project-card-subtitle">{props.subtitle}</p>
+        <p className="project-card-subtitle">{subtitle}</p>
         <div className="project-card-description">
-          <p>{props.description}</p>
+          <p>{description}</p>
         </div>
       </div>
       <div className="project-card-right">
         <img
           className="project-card-image project-card-gradient-outline"
-          src={props.imgURL}
+          src={imgURL}
+          alt={title}
         />
       </div>
     </div>
   );
-}
+});
 
 export default ProjectCard;

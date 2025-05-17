@@ -8,16 +8,20 @@
   z-index: 1000;
 }
 
+.navbar-container {
+  position: relative;
+  margin: 0 4vw;
+}
+
 .nav-links-container {
   display: flex;
   justify-content: space-around;
   align-items: center; /* Center vertically */
   height: 100%;
-  margin: 0; /* Remove default margin */
-  border-bottom : 0.18em solid;
+  border-bottom: 0.18em solid;
   padding: 0.4em;
-  font-size: 1.2rem;
-  margin: 0 4vw;
+  font-size: var(--fs-sm);
+  flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 
 .nav-links {
@@ -26,10 +30,78 @@
   align-items: center;
   text-decoration: none;
   color: #c1ffff; 
-  padding: 0 1em; 
+  padding: 0.5em;
+  margin: 0.25em;
 }
 
 .highlight {
   font-weight: bold;
-  border-bottom: 2px solid ;
+  border-bottom: 2px solid;
+}
+
+/* Mobile navigation styles */
+@media (max-width: 600px) {
+  .mobile-menu-button {
+    display: block;
+  }
+  
+  .nav-links-container {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #60718b;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    border-bottom: none;
+  }
+  
+  .nav-links-container.show {
+    display: flex;
+  }
+  
+  .nav-links {
+    width: 100%;
+    text-align: center;
+    padding: 0.8em;
+    border-bottom: 1px solid rgba(193, 255, 255, 0.2);
+  }
+  
+  /* Animate menu icon to X when open */
+  .mobile-menu-button[aria-expanded="true"] .menu-icon {
+    background-color: transparent;
+  }
+  
+  .mobile-menu-button[aria-expanded="true"] .menu-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  
+  .mobile-menu-button[aria-expanded="true"] .menu-icon::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+  }
+  
+  /* Adjust navbar container */
+  .navbar-container {
+    margin: 0;
+    padding: 10px 4vw;
+  }
+}
+
+/* Larger mobile and tablet */
+@media (min-width: 601px) and (max-width: 768px) {
+  .nav-links-container {
+    margin: 0 2vw;
+    padding: 0.3em 0.1em;
+  }
+  
+  .nav-links {
+    font-size: 0.9rem;
+    padding: 0.3em;
+    margin: 0.15em;
+  }
 }

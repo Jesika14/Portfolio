@@ -1,13 +1,16 @@
 .art-main {
+  padding: var(--space-md) var(--space-sm);
 }
-.art-title h2{
+
+.art-title h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.3rem;
+  font-size: var(--fs-lg);
   color: #fedcae;
   text-transform: uppercase;
   padding: 0;
+  margin-bottom: var(--space-md);
 }
 
 .art-cards {
@@ -15,5 +18,11 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .art-main {
+    padding: var(--space-md) var(--space-lg);
+  }
 }

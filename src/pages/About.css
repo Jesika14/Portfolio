@@ -1,9 +1,10 @@
 .about-main {
-  padding: 0 3vw;
+  padding: var(--space-md) var(--space-sm);
   display: flex;
   justify-content: space-between;
   color: #fedcae;
   margin: 1rem 0;
+  flex-direction: column; /* Stack vertically on mobile first */
 }
 
 .about-main h3,
@@ -12,8 +13,9 @@
   margin: 0;
 }
 
-.about-main h1{
-    margin-bottom: 0.4em;
+.about-main h1 {
+  margin-bottom: 0.4em;
+  font-size: var(--fs-lg);
 }
 
 .about-left {
@@ -25,12 +27,15 @@
     )
     80;
   padding-left: 0.8em;
+  margin-bottom: var(--space-lg);
 }
+
 .about-left-title {
   box-shadow: -2px 3px;
   width: fit-content;
   margin-bottom: 0.4em;
   padding: 0 0.4em;
+  font-size: var(--fs-lg);
 }
 
 .about-left-education-item {
@@ -41,43 +46,49 @@
   color: #a8ffff;
   width: fit-content;
   padding: 0 0.4em;
+  font-size: var(--fs-md);
 }
 
 .about-left-content {
+  font-size: var(--fs-sm);
 }
 
 .about-left-subcontent {
-  font-size: 0.8rem;
+  font-size: var(--fs-xs);
   color: white;
 }
 
 .about-right {
   display: flex;
   flex-direction: column;
-  align-items: end;
-  border-right: 2.5px solid transparent;
+  align-items: flex-start; /* Left-aligned on mobile */
+  border-right: none; /* Remove right border on mobile */
+  border-left: 2.5px solid transparent; /* Add left border on mobile */
   border-image: linear-gradient(
       to bottom,
       rgba(254, 223, 178, 1) 40%,
       rgba(150, 255, 249, 1) 100%
     )
     80;
-  padding-right: 0.8em;
+  padding-left: 0.8em;
+  padding-right: 0;
 }
 
 .about-right-title {
   box-shadow: -2px 3px;
   width: fit-content;
   padding: 0 0.4em;
+  font-size: var(--fs-lg);
 }
 
 .about-right-subtitle {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: flex-start; /* Left-aligned on mobile */
   color: #a8ffff;
   margin: 0.2em 0;
   padding: 0 0.4em;
+  font-size: var(--fs-md);
 }
 
 .mp {
@@ -87,6 +98,7 @@
 
 .about-right-content {
   color: #fedcae;
+  font-size: var(--fs-sm);
 }
 
 .gradient-outline {
@@ -97,4 +109,24 @@
       rgba(150, 255, 249, 1) 100%
     )
     1;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .about-main {
+    flex-direction: row;
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .about-right {
+    align-items: flex-end; /* Right-aligned on desktop */
+    border-left: none; /* Remove left border on desktop */
+    border-right: 2.5px solid transparent; /* Add right border on desktop */
+    padding-left: 0;
+    padding-right: 0.8em;
+  }
+
+  .about-right-subtitle {
+    align-items: flex-end; /* Right-aligned on desktop */
+  }
 }
