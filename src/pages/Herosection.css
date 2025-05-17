@@ -16,6 +16,8 @@
   height: 100vh;
   z-index: 1;
   background-color: #60718B; /* Match background color */
+  /* Prevent touch gestures from zooming */
+  touch-action: pan-x pan-y;
 }
 
 .hero-iframe {
@@ -24,6 +26,11 @@
   border: none;
   pointer-events: auto; /* Enable interaction with the model */
   background-color: transparent; /* Make background transparent */
+  /* Additional properties to prevent zooming */
+  max-width: 100%;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: pan-x pan-y;
 }
 
 /* Improved scroll down button with better visibility */

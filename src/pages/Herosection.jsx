@@ -48,7 +48,7 @@ const Herosection = () => {
           mozallowfullscreen="true"
           webkitallowfullscreen="true"
           allow="autoplay; fullscreen; xr-spatial-tracking"
-          src="https://sketchfab.com/models/b8f126200cd244ffbb80e659da6c8015/embed?autostart=1&preload=1&ui_inspector=0&ui_ar=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_annotations=0&ui_watermark=0&ui_hint=0&ui_controls=0&ui_infos=0&camera=0&zoom=0&pan=0&transparent=1"
+          src="https://sketchfab.com/models/b8f126200cd244ffbb80e659da6c8015/embed?autostart=1&preload=1&ui_inspector=0&ui_ar=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_annotations=0&ui_watermark=0&ui_hint=0&ui_controls=0&ui_infos=0&scrollwheel=0&mousewheel=0&dnt=1&touch_rotation=0&zoom=0&camera_zoom=0&camera_pan=0&transparent=1"
         ></iframe>
       </div>
 
@@ -76,7 +76,7 @@ const Herosection = () => {
 
           <div className="hero-section-download-cv">
             <a
-              href="https://drive.google.com/file/d/1VeQ7ONnKUNHCqUuLoNP35AkRe0WFUBI0/view"
+              href="https://drive.google.com/file/d/1iQyy9aMO_LdMSDpk35bBvBedvgH20FPW/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="cv-button gradient-outline"
