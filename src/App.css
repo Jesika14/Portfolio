@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap');
 @import './styles/typography.css';
+@import './styles/animations.css';
 
 * {
   font-family: "Monda", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
 }
 
 :root {
-  /* Color palette */
+  /* Color palette - ensure this matches iframe background */
   --primary-color: #60718B;
   --light-blue: #A8FFFF;
   --cream: #FEDCAE;
@@ -34,7 +36,22 @@
   --space-sm: clamp(0.5rem, 2vw, 1rem);
   --space-md: clamp(1rem, 3vw, 2rem);
   --space-lg: clamp(1.5rem, 5vw, 3rem);
-  --space-xl: clamp(2rem, 6vw, 4rem); /* Added extra large spacing */
+  --space-xl: clamp(2rem, 6vw, 4rem);
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+/* Improved touch target sizing for mobile */
+@media (max-width: 768px) {
+  button, 
+  .nav-links,
+  [role="button"],
+  a.cv-button {
+    min-height: var(--touch-target-size);
+    min-width: var(--touch-target-size);
+  }
 }
 
 /* Added global responsive styles */

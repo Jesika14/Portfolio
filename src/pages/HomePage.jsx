@@ -1,32 +1,58 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Herosection from "./Herosection";
 import About from "./About";
-import Project from "./Projects";
+import Projects from "./Projects";
+import DigitalArt from "./DigitalArt";
 import Social from "../components/Social";
+import Contact from "../components/Contact";
 import "./HomePage.css";
-import Art from "./DigitalArt";
 
 const HomePage = () => {
+  // Add scroll handling for better mobile experience
+  useEffect(() => {
+    // Only on mobile devices
+    if (window.innerWidth <= 768) {
+      const handleScroll = () => {
+        const heroSection = document.querySelector('.hero-section');
+        const scrollY = window.scrollY;
+        const heroHeight = heroSection?.offsetHeight || 0;
+        
+        // If scrolled past the hero section, we want to handle any open CV drawer
+        if (scrollY > heroHeight) {
+          const mobileDrawer = document.querySelector('.mobile-cv-drawer.show');
+          if (mobileDrawer) {
+            mobileDrawer.classList.remove('show');
+            const button = document.querySelector('.pull-up-button.active');
+            if (button) button.classList.remove('active');
+          }
+        }
+      };
+      
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
+  }, []);
+
   return (
     <div className="homepage-main">
-      <div className="homepage-herosection" id="hero">
+      <section id="hero" className="homepage-herosection">
         <Herosection />
-      </div>
-      <div className="homepage-about" id="about">
+      </section>
+      <section id="about" className="homepage-about">
         <About />
-      </div>
-      <div className="homepage-project" id="project">
-        <Project />
-      </div>
-      <div className="homepage-art" id="art">
-        <Art />
-      </div>
-      <div className="homepage-social" id="contact">
+      </section>
+      <section id="project" className="homepage-project">
+        <Projects />
+      </section>
+      <section id="art" className="homepage-art">
+        <DigitalArt />
+      </section>
+      <section id="social" className="homepage-social">
         <Social />
-      </div>
-      {/* <div className="homepage-contact" id="contact">
+      </section>
+      <section id="contact" className="homepage-contact">
         <Contact />
-      </div> */}
+      </section>
     </div>
   );
 };
