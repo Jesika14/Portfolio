@@ -39,6 +39,30 @@ const Navbar = () => {
     setMobileMenuOpen(false); // Close mobile menu when link is clicked
   };
 
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const navbar = document.getElementById('navbar');
+      const mobileButton = document.querySelector('.mobile-menu-button');
+
+      if (mobileMenuOpen && 
+          navbar && 
+          !navbar.contains(event.target) || 
+          (mobileButton && mobileButton.contains(event.target))) {
+        return;
+      }
+
+      if (mobileMenuOpen && navbar && !navbar.contains(event.target)) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [mobileMenuOpen]);
+
   return (
     <nav id="navbar" aria-label="Main navigation">
       <div className="navbar-container">

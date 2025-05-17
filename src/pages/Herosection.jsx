@@ -4,7 +4,7 @@ import "./Herosection.css";
 const Herosection = () => {
   return (
     <div className="hero-section">
-      <div className="hero-section-model" aria-hidden="true">
+      <div className="hero-section-model">
         <iframe
           title="3D Portfolio Model"
           frameBorder="0"
@@ -13,7 +13,7 @@ const Herosection = () => {
           mozallowfullscreen="true"
           webkitallowfullscreen="true"
           allow="autoplay; fullscreen; xr-spatial-tracking"
-          src="https://sketchfab.com/models/b8f126200cd244ffbb80e659da6c8015/embed?autostart=1&preload=1&ui_hint=0&dnt=1"
+          src="https://sketchfab.com/models/b8f126200cd244ffbb80e659da6c8015/embed?autostart=1&preload=1&ui_inspector=0&ui_ar=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_annotations=0&ui_watermark=0&ui_hint=0"
         ></iframe>
       </div>
       <div className="hero-section-text">
@@ -32,7 +32,7 @@ const Herosection = () => {
             href="https://drive.google.com/file/d/1VeQ7ONnKUNHCqUuLoNP35AkRe0WFUBI0/view"
             target="_blank"
             rel="noopener noreferrer"
-            className="about-left-title gradient-outline"
+            className="cv-button gradient-outline"
             aria-label="Download CV"
           >
             Download CV

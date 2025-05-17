@@ -1,0 +1,53 @@
+:root {
+  /* Font weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+  
+  /* Line heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-loose: 1.7;
+  
+  /* Letter spacing */
+  --ls-tight: -0.01em;
+  --ls-normal: 0;
+  --ls-wide: 0.05em;
+  --ls-wider: 0.1em;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: var(--fw-bold);
+  line-height: var(--line-height-tight);
+}
+
+h1 {
+  font-size: var(--fs-xl);
+  letter-spacing: var(--ls-tight);
+}
+
+h2 {
+  font-size: var(--fs-lg);
+  letter-spacing: var(--ls-tight);
+}
+
+h3 {
+  font-size: var(--fs-md);
+  letter-spacing: var(--ls-normal);
+}
+
+/* Paragraphs */
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: var(--fw-regular);
+  line-height: var(--line-height-normal);
+}
+
+/* Import this in your App.css */

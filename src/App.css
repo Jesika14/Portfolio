@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap');
+@import './styles/typography.css';
 
 * {
   font-family: "Monda", sans-serif;
@@ -33,6 +34,7 @@
   --space-sm: clamp(0.5rem, 2vw, 1rem);
   --space-md: clamp(1rem, 3vw, 2rem);
   --space-lg: clamp(1.5rem, 5vw, 3rem);
+  --space-xl: clamp(2rem, 6vw, 4rem); /* Added extra large spacing */
 }
 
 /* Added global responsive styles */

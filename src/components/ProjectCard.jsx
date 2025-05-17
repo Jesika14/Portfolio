@@ -1,7 +1,7 @@
-import React, { memo } from "react";
+import React from "react";
 import "./ProjectCard.css";
 
-const ProjectCard = memo(({ title, url, subtitle, description, imgURL }) => {
+const ProjectCard = ({ title, url, subtitle, description, imgURL }) => {
   return (
     <div className="project-card-main project-card-gradient-outline">
       <div className="project-card-left">
@@ -23,10 +23,13 @@ const ProjectCard = memo(({ title, url, subtitle, description, imgURL }) => {
           className="project-card-image project-card-gradient-outline"
           src={imgURL}
           alt={title}
+          width="600"
+          height="338"
+          loading="lazy"
         />
       </div>
     </div>
   );
-});
+};
 
 export default ProjectCard;

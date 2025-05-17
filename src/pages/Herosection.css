@@ -19,7 +19,7 @@
   width: 100%;
   height: 100%;
   border: none;
-  pointer-events: none;
+  pointer-events: auto; /* Enable interaction with the model */
 }
 
 .hero-section-text {
@@ -33,6 +33,7 @@
   color: #fedcae;
   text-align: right;
   padding: var(--space-md);
+  pointer-events: none; /* Make text layer non-interactive */
 }
 
 .hero-section-text-text {
@@ -57,14 +58,30 @@
 
 .hero-section-download-cv {
   margin-top: var(--space-md);
+  pointer-events: auto; /* Enable CV button interaction */
 }
 
-.hero-section-download-cv a {
+/* CV Button style */
+.cv-button {
   padding: var(--space-sm);
   display: inline-block;
   text-decoration: none;
   color: var(--cream);
   font-size: var(--fs-sm);
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cv-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.cv-button:active {
+  transform: translateY(1px);
 }
 
 /* Mobile adjustments */
@@ -73,9 +90,30 @@
     align-items: center;
     text-align: center;
     padding: var(--space-md) var(--space-sm);
+    /* On mobile, we need some backdrop for text readability */
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 8px;
+    margin: 0 auto;
   }
   
   .hero-section-text-text {
     max-width: 100%;
+  }
+}
+
+/* Desktop improvements */
+@media (min-width: 1200px) {
+  .hero-section-text {
+    padding-right: var(--space-xl);
+  }
+  
+  .hero-section-text-text {
+    max-width: 55ch;
+  }
+  
+  .hero-section-text-text h2 {
+    font-size: clamp(3rem, 6vw, 4rem);
   }
 }
