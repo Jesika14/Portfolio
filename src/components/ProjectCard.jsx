@@ -47,8 +47,8 @@ const ProjectCard = ({ title, url, subtitle, description, imgURL }) => {
           className="project-card-image project-card-gradient-outline"
           src={imgURL}
           alt={title}
-          width="600"
-          height="338"
+          // width="600"
+          // height="338"
           loading="lazy"
         />
       </div>

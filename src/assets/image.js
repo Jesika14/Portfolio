@@ -11,6 +11,8 @@ import fab from "./project/fab.webp";
 import landing_page from "./project/landing-page.webp";
 import web_app from "./project/web-app.webp";
 import case_study from "./project/case_study.webp";
+import lune from "./project/lune.webp";
+import mello from "./project/mello.webp";
 
 export {
   bridge,
@@ -26,4 +28,6 @@ export {
   landing_page,
   web_app,
   case_study,
+  lune,
+  mello
 };

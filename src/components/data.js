@@ -11,6 +11,7 @@ import {fab} from "../assets/image";
 import {landing_page} from "../assets/image";
 import {web_app} from "../assets/image";
 import {case_study} from "../assets/image";
+import { lune, mello } from "../assets/image";
 
 const artData = [
   {
@@ -75,6 +76,22 @@ const projectData = [
     description:
       "Design a user-friendly music web app with seamless  integration of playback, playlists, and social sharing.  Designed an intuitive UI/UX for enhanced user  experience.",
     imgURL: fab,
+  },
+  {
+    title: "Brand Identity Design", 
+    url: "https://www.behance.net/gallery/178696485/Music-web-app",
+    subtitle: "Luné Café",
+    description:
+      "Designed logo, menu visuals, and packaging wit h consistent branding Created digital assets for social media and mock store setups. Tools: Figma, Illustrator",
+    imgURL: lune,
+  },
+  {
+    title: "Brand Identity & Packaging Design",
+    url: "https://www.behance.net/gallery/226215567/Brand-Mello",
+    subtitle: "Mello",
+    description:
+      "Created a warm, playful visual identity for a snack and beverage brand, including logo, packaging, and promotional materials . Focused on cohesive color palette and friendly, modern aest hetics . Tools: Figma",
+    imgURL: mello,
   },
   {
     title: "Landing Page",
